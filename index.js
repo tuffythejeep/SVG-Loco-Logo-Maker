@@ -11,3 +11,19 @@ inquirer.prompt([
     name: 'text',
     message: 'Enter up to three characters for your LOGO!!:'
   },
+  {
+    type: 'list',
+    name: 'shape',
+    message: 'Choose a shape:',
+    choices: ['Triangle', 'Circle', 'Square']
+  },
+  {
+    type: 'input',
+    name: 'shapeColor',
+    message: 'Enter a color keyword (or hexadecimal number) for your SHAPE:'
+  },
+  {
+    type: 'input',
+    name: 'textColor',
+    message: 'Enter a color keyword (or hexadecimal number) for the TEXT:'
+  }
