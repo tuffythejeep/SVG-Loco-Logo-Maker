@@ -1,9 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Shape = require("/lib/Shape.js");
-const Triangle = require("/lib/Triangle.js");
-const Circle = require("/lib/Circle.js");
-const Square = require("lib/Square.js");
+const Shape = require("./lib/Shape.js");
+const Triangle = require("./lib/Triangle.js");
+const Circle = require("./lib/Circle.js");
+const Square = require("./lib/Square.js");
+
+const shapeClasses = {
+  Triangle,
+  Circle,
+  Square,
+};
 
 inquirer
   .prompt([
@@ -30,7 +36,8 @@ inquirer
     },
   ])
   .then((answers) => {
-    const shape = new answers.shape();
+    const ShapeClass = shapeClasses[answers.shape];
+    const shape = new ShapeClass();
     shape.setColor(answers.shapeColor);
     const svg = `<svg width="300" height="200">${shape.render()}</svg>`;
     fs.writeFileSync("logo.svg", svg);
