@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Shape = require("./Shape");
+
 const Triangle = require("./Triangle");
 const Circle = require("./Circle");
 const Square = require("./Square");
