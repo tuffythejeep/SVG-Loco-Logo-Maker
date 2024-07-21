@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Shape = require("./lib/shape");
-const Triangle = require("./lib/triangle");
-const Circle = require("./lib/circle");
-const Square = require("./lib/square");
+const Shape = require(".shape");
+const Triangle = require(".triangle");
+const Circle = require(".circle");
+const Square = require(".square");
 
 inquirer
   .prompt([
