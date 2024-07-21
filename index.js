@@ -30,21 +30,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    let shape;
-    switch (answers.shape) {
-      case "Triangle":
-        shape = new Triangle();
-        break;
-      case "Circle":
-        shape = new Circle();
-        break;
-      case "Square":
-        shape = new Square();
-        break;
-      default:
-        console.error("Invalid shape selected");
-        return;
-    }
+    const shape = new answers.shape();
     shape.setColor(answers.shapeColor);
     const svg = `<svg width="300" height="200">${shape.render()}</svg>`;
     fs.writeFileSync("logo.svg", svg);
