@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Shape = require("./lib/Shape");
-const Triangle = require("./lib/Triangle");
-const Circle = require("./lib/Circle");
-const Square = require("./lib/Square");
+const Shape = require("./lib/shape");
+const Triangle = require("./lib/triangle");
+const Circle = require("./lib/circle");
+const Square = require("./lib/square");
 
 inquirer
   .prompt([
@@ -30,7 +30,21 @@ inquirer
     },
   ])
   .then((answers) => {
-    const shape = new answers.shape();
+    let shape;
+    switch (answers.shape) {
+      case "Triangle":
+        shape = new Triangle();
+        break;
+      case "Circle":
+        shape = new Circle();
+        break;
+      case "Square":
+        shape = new Square();
+        break;
+      default:
+        console.error("Invalid shape selected");
+        return;
+    }
     shape.setColor(answers.shapeColor);
     const svg = `<svg width="300" height="200">${shape.render()}</svg>`;
     fs.writeFileSync("logo.svg", svg);
