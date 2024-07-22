@@ -39,7 +39,18 @@ inquirer
     const ShapeClass = shapeClasses[answers.shape];
     const shape = new ShapeClass();
     shape.setColor(answers.shapeColor);
-    const svg = `<svg width="300" height="200">${shape.render()}</svg>`;
+
+    const svg = `
+      <svg width="300" height="200">
+        ${shape.render()}
+        <text x="150" y="100" font-size="40" text-anchor="middle" fill="${
+          answers.textColor
+        }">
+          ${answers.text}
+        </text>
+      </svg>
+    `;
+
     fs.writeFileSync("logo.svg", svg);
     console.log("Generated logo.svg");
   });
