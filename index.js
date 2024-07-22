@@ -41,11 +41,11 @@ inquirer
     shape.setColor(answers.shapeColor);
 
     const svg = `
-      <svg width="300" height="200">
+      <svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
         ${shape.render()}
         <text x="150" y="100" font-size="40" text-anchor="middle" fill="${
           answers.textColor
-        }">
+        }" dominant-baseline="middle">
           ${answers.text}
         </text>
       </svg>
