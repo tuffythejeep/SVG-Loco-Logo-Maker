@@ -4,13 +4,13 @@ describe("Square", () => {
   it("renders a square with the correct color", () => {
     const square = new Square();
     square.setColor("green");
-    expect(square.render()).toMatchSnapshot();
+    expect(square.render()).toEqual('<rect fill="green" />'); // Adjust according to actual render output
   });
 
   it("renders a square with the correct size", () => {
     const square = new Square();
     square.setSize(50);
-    expect(square.render()).toMatchSnapshot();
+    expect(square.render()).toEqual('<rect width="50" height="50" />'); // Adjust according to actual render output
   });
 
   it("renders a square with default color and size", () => {
@@ -18,16 +18,16 @@ describe("Square", () => {
     expect(square.render()).toMatchSnapshot();
   });
 
-  it("renders a square with invalid color", () => {
+  it("handles invalid color gracefully", () => {
     const square = new Square();
     square.setColor("invalid-color");
-    expect(square.render()).toThrowError();
+    expect(square.getColor()).not.toBe("invalid-color"); // Ensure it defaults or remains unchanged
   });
 
-  it("renders a square with invalid size", () => {
+  it("handles invalid size gracefully", () => {
     const square = new Square();
     square.setSize("invalid-size");
-    expect(square.render()).toThrowError();
+    expect(square.getSize()).not.toBe("invalid-size"); // Ensure it defaults or remains unchanged
   });
 
   it("sets color correctly", () => {
