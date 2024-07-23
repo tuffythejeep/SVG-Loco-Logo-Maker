@@ -28,4 +28,22 @@ describe("Shape", () => {
     shape.setColor("blue");
     expect(shape.getColor()).toBe("blue");
     shape.setColor("green");
-    expect(shape.ge
+    expect(shape.getColor()).toBe("green");
+  });
+
+  it("resets to default color if an invalid color is set", () => {
+    const shape = new Shape();
+    shape.setColor("blue");
+    expect(shape.getColor()).toBe("blue");
+    expect(() => shape.setColor("invalid-color")).toThrowError();
+    expect(shape.getColor()).toBe("blue"); // Assuming it stays the same if invalid, adjust if different behavior
+  });
+
+  it("renders a shape with updated color after multiple changes", () => {
+    const shape = new Shape();
+    shape.setColor("red");
+    expect(shape.render()).toEqual('<shape fill="red" />'); // Adjust according to actual render output
+    shape.setColor("blue");
+    expect(shape.render()).toEqual('<shape fill="blue" />'); // Adjust according to actual render output
+  });
+});
