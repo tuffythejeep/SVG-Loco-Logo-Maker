@@ -38,8 +38,8 @@ Here is the link to my video (which was recorded with sound):
 
 - <https://drive.google.com/file/d/1bweYnuSk6Ip4GdBvptVBexaTmJnEp995/view>
 
-Here is a picture of my generated OUTPUTREADME.md:
-![image](https://github.com/user-attachments/assets/67b8474a-8e7f-4137-bb74-3b2466a517f3)
+Here is a picture of my generated logo.svg:
+(![image](https://github.com/user-attachments/assets/efef4e1d-0a05-468a-aba0-40de293c1cff)
 
 
 ![image](https://github.com/user-attachments/assets/cb2df9a6-93fd-470c-8c61-67c77f3739a3)
