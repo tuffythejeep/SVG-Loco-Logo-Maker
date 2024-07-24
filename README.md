@@ -36,7 +36,7 @@ There is no deployed page, however, you can find my repository page here:
 
 Here is the link to my video (which was recorded with sound):
 
-- <https://drive.google.com/file/d/1bweYnuSk6Ip4GdBvptVBexaTmJnEp995/view>
+- <https://drive.google.com/file/d/1tHMUMKpxH1hVY6b4NzRTglJQZ891S6cC/view>
 
 Here is a picture of my generated logo.svg: 
 
