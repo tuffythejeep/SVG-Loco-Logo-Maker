@@ -39,8 +39,7 @@ Here is the link to my video (which was recorded with sound):
 - <https://drive.google.com/file/d/1bweYnuSk6Ip4GdBvptVBexaTmJnEp995/view>
 
 Here is a picture of my generated logo.svg: /
-
-(![image](https://github.com/user-attachments/assets/efef4e1d-0a05-468a-aba0-40de293c1cff)
+![image](https://github.com/user-attachments/assets/efef4e1d-0a05-468a-aba0-40de293c1cff)
 
 
 ## Installation
