@@ -42,9 +42,6 @@ Here is a picture of my generated logo.svg:
 (![image](https://github.com/user-attachments/assets/efef4e1d-0a05-468a-aba0-40de293c1cff)
 
 
-![image](https://github.com/user-attachments/assets/cb2df9a6-93fd-470c-8c61-67c77f3739a3)
-
-
 ## Installation
 
 N/A
